@@ -12,23 +12,79 @@
       crossorigin="anonymous"
     />
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      .container {
+        flex: 1;
+      }
+
       .special-link-box {
         text-align: center;
+        margin: 20px 0;
       }
 
       .special-link-box a {
         color: black;
         background-color: #87cefa; /* Light Sky Blue */
-        padding: 15px 25px;
-        font-size: 120%;
+        padding: 10px 20px; /* Reduced padding */
+        font-size: 105%; /* Reduced font size */
         font-family: verdana;
         text-decoration: none;
         display: inline-block;
+        border-radius: 4px; /* Added slight rounding for better appearance */
+        transition: background-color 0.3s ease; /* Smooth transition */
       }
 
       .special-link-box a:hover,
       .special-link-box a:active {
         background-color: #00bfff; /* Deep Sky Blue on hover */
+        text-decoration: none; /* Ensure no underline on hover */
+      }
+
+      /* Make footer exactly like header and stick to bottom */
+      footer {
+        background-color: #007bff !important; /* Same blue as header */
+        color: white !important; /* Same white text as header */
+        padding: 1rem 0 !important; /* Same padding as header (py-4 = 1.5rem) */
+        border: none !important; /* Remove any borders */
+        margin-top: auto; /* Push footer to bottom */
+        width: 100%;
+        position: relative;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .github-link {
+        color: white !important;
+        text-decoration: none;
+        font-family: verdana;
+        font-size: 105%;
+        padding: 5px 15px;
+        border: 1px solid white;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .github-link:hover {
+        background-color: white;
+        color: #007bff !important;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -72,14 +128,14 @@
             class="mr-3"
           />
           <p>
-            My name is Krystian A Crawford, and I am a student at the University
+            My name is Krystian A Crawford and I am a student at the University
             of Belize. I'm doing my associates in IT currently, and after that,
             my plan from then is to further my skills to pursue a job abroad
             primarily. I am striving to further my knowledge about computer
-            science as much as possible; I'm living in Belmopan, Cayo, and I
-            enjoy tinkering with programs and slowly learning how they function.
-            I also enjoy playing games. Currently, I am trying to learn game
-            development as it is something that I enjoy doing and would love to be able
+            science as much as possible; I'm living at Belmopan, Cayo, and I
+            enjoy tinkering with programs and slowly learning how they function,
+            I also enjoy playing games. Currently I am trying to learn is game
+            dev as it is something that I enjoy doing and would love to be able
             to learn the skill.
           </p>
         </div>
@@ -88,20 +144,17 @@
 
     <div class="special-link-box">
       <a href="https://2021255989.github.io/js-programs/"
-        >Click here to see my JavaScript Programs</a
+        >Click here to see my Java Script Programs</a
       >
     </div>
 
-    <footer class="text-center py-3 bg-light">
-      <p>@ Powered by UB</p>
+    <footer>
+      <div class="footer-content">
+        <a href="https://github.com/2021255989?tab=repositories" class="github-link">
+          Click here for my GitHub Repo's
+        </a>
+        <p class="mb-0">@ Powered by UB</p>
+      </div>
     </footer>
   </body>
 </html>
-
-
-
-
-
-
-
-
